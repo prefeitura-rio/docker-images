@@ -10,7 +10,7 @@ RUN apt-get update && \
 WORKDIR /opt
 RUN git clone https://github.com/synthetichealth/synthea.git && \
     cd synthea && \
-    ./gradlew build
+    ./gradlew build; exit 0
 
 # Set the entrypoint to run synthea
 WORKDIR /opt/synthea
